@@ -13,7 +13,7 @@
     "require": {
         "yiisoft/yii2": "*",
 		"yiisoft/yii2-authclient": "*",
-        "lirriella/yii2-cropper": "*"
+        "budyaga/yii2-cropper": "*"
     },
     "autoload": {
         "psr-4": {
