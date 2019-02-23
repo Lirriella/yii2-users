@@ -30,13 +30,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist budyaga/yii2-users "*"
+php composer.phar require --prefer-dist lirriella/yii2-users "*"
 ```
 
 or add
 
 ```
-"budyaga/yii2-users": "*"
+"lirriella/yii2-users": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -47,7 +47,7 @@ Config
 
 ```
 'user' => [
-    'identityClass' => 'budyaga\users\models\User',
+    'identityClass' => 'lirriella\users\models\User',
     'enableAutoLogin' => true,
     'loginUrl' => ['/login'],
 ],
@@ -61,7 +61,7 @@ Config
             'scope' => 'email'
         ],
         'google' => [
-            'class' => 'budyaga\users\components\oauth\Google',
+            'class' => 'lirriella\users\components\oauth\Google',
             'clientId' => 'XXX',
             'clientSecret' => 'XXX',
         ],
@@ -145,7 +145,7 @@ Not all services returns all user data. Some of the data get the default setting
 
 Database migrations
 --------
-*yii migrate/up --migrationPath=@vendor/budyaga/yii2-users/migrations*
+*yii migrate/up --migrationPath=@vendor/lirriella/yii2-users/migrations*
 
 This migration create all necessary for the operation of the module tables and two users:
 
@@ -158,7 +158,7 @@ Usage
 --------
 in main layout:
 ```
-use budyaga\users\components\AuthorizationWidget;
+use lirriella\users\components\AuthorizationWidget;
 ```
 
 ```
@@ -181,7 +181,7 @@ If you want use custom views and email templates you can override their in confi
 ```
 'modules' => [
     'user' => [
-        'class' => 'budyaga\users\Module',
+        'class' => 'lirriella\users\Module',
         'customViews' => [
             'login' => '@app/views/site/login'
         ],
@@ -191,4 +191,4 @@ If you want use custom views and email templates you can override their in confi
     ],
 ],
 ```
-You can override all views from *vendor\budyaga\yii2-users\views\user* and *vendor\budyaga\yii2-users\mail* folders.
+You can override all views from *vendor\lirriella\yii2-users\views\user* and *vendor\lirriella\yii2-users\mail* folders.
